@@ -1,23 +1,55 @@
-<div class="row">
-  <div class="col-xs-12 col-md-8">
-  	<h2>Tweet</h2>
-  	<% posts["statuses"].each do |post| %>
-		<%= image_tag post["user"]["profile_image_url"], size: "25x25" %>
-		<%= post["user"]["name"] %><br>
-	<%= post["text"] %><br>
-	<% if post["entities"]["media"].present? %>
-		<%= image_tag post["entities"]["media"][0]["media_url"] %><br>
-	<% end %>
-	<% end %>
-  </div>
-
-	<div class="col-xs-6 col-md-4">
-		<% stocks.each do |stock| %>
-			<%= stock["ask"] %><br>
-			<%= stock["bid"] %><br>
-			<%= stock["change"] %><br>
-			<%= stock["market_capitalization"] %><br>
-			<%= stock["earnings_per_share"] %><br>
-		<% end %>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-12 col-md-8">
+			<div class= "bg-success">
+				<h3><u>View the latest tweets about this company</u></h3>
+				<table class="table table-bordered table-striped">
+				  	<tbody>
+						  	<% posts["statuses"].each do |post| %>
+						  		<tr>
+									<%= image_tag post["user"]["profile_image_url"], size: "25x25" %>
+									<%= post["user"]["name"] %><br>
+									<%= post["text"] %><br>
+									<% if post["entities"]["media"].present? %>
+										<%= image_tag post["entities"]["media"][0]["media_url"] %><br>
+										<hr>
+									<% end %>
+								</tr>
+							<% end %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+			<div class= "bg-primary">
+	      		<div class="sidebar-module sidebar-module-inset">
+			            <h4><u>About this company</u></h4>
+			            <p><small>Name goes here <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</small></p>
+			       </div>
+			       <div class="sidebar-module">
+			          	<% stocks.each do |stock| %>
+			            	<h4><strong><u>Stock Info</strong></u></h4>
+			            	<ol class="list-unstyled">
+				            	<li>Ask: <%= stock["ask"] %></li>
+							<li>Bid: <%= stock["bid"] %></li>
+							<li>Change: <%= stock["change"] %></li>
+							<li>Market cap: <%= stock["market_capitalization"] %></li>
+							<li>EPS: <%= stock["earnings_per_share"] %></li>
+			            	</ol>
+			      	<% end %>
+				</div>
+			      <div class="sidebar-module">
+			            <h4>Further Reading</h4>
+			            <ol class="list-unstyled">
+			              <li><a href="#">GitHub</a></li>
+			              <li><a href="#">Twitter</a></li>
+			              <li><a href="#">Facebook</a></li>
+					</ol>
+			      </div>
+			</div>
+		</div><!-- /.blog-sidebar -->
 	</div>
 </div>
+
+
+

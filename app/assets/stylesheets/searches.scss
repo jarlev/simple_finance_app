@@ -3,15 +3,31 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+
+
 body {
-	background-color: #b7d1c4
+	background-color: #b7d1c4;
+	text-align: center;
+	font-family: Comic;
 }
 
 h1 {
-	font-family: Verdana;
+	font-family: Garamond;
 	font-weight: bold;
 	text-align: center;
 	padding-top: 25px;
 	padding-bottom: 25px;
 	// color: #acd1b2;
+}
+
+body > div {
+	padding-top: 50px;
+}
+
+// body > div > div > div {
+// 	padding-top: 30px;
+// }
+
+a {
+	color: white;
 }
