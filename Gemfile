@@ -29,6 +29,8 @@ gem 'yahoo-finance'
 
 gem 'bootstrap-sass'
 
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -51,3 +53,6 @@ group :development do
   gem 'spring'
 end
 
+gem 'rails_12factor', group: :production
+
+ruby "2.2.4"
