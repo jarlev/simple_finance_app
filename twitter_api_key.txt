@@ -1,0 +1,25 @@
+QkPpfuwfxP1zTi4d5vcTsoZUg:APJaSvFxFPB7YQ2RUHTv9RLSZPHViXQL975FMFzVtItbFq7tbi
+
+
+@response = HTTParty.post("https://api.twitter.com/oauth2/token",
+	{:headers => 'Authorization' => 																						'QkPpfuwfxP1zTi4d5vcTsoZUg:APJaSvFxFPB7YQ2RUHTv9RLSZPHViXQL975FMFzVtItbFq7tbi', 		'Content-Type' => 'application/x-www-form-urlencoded;charset=UTF-8'
+	:body => 'grant_type=client_credentials'
+	}
+)
+
+
+Bearer Token:
+AAAAAAAAAAAAAAAAAAAAAJtSvAAAAAAASUjqESWySLnkDXAxBYR2J%2FBpFV4%3DK5m3vI5B2r56vz8Uvf9lbWGHdtPbVy54aq2Et1y6T8czPDEb11
+
+
+Consumer Key (API Key)	QkPpfuwfxP1zTi4d5vcTsoZUg
+Consumer Secret (API Secret)	APJaSvFxFPB7YQ2RUHTv9RLSZPHViXQL975FMFzVtItbFq7tbi
+Access Level	Read and write (modify app permissions)
+Owner	jar_lev
+Owner ID	63299164
+
+Access Token	 63299164-O29Od673tWakSfNhTa6b6jgqbTRpJ2r2Ru19rzPvd
+Access Token Secret	tmGtIQdUnbH4NEqJO3g38u9QMRa9ddxfNVZO6RXHbfMQx
+Access Level	Read and write
+Owner	jar_lev
+Owner ID	63299164

@@ -1,0 +1,11 @@
+<h1>Twitter Search App</h1>
+	<%= form_for @search, url: searches_path, remote: true do |f| %>
+		<%= f.label :query %>
+		<%= f.text_area :query %>
+		<br>
+		<%= f.submit "Search" %>
+	<% end %>
+
+	<div id="results">
+
+	</div>

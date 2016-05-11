@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-xs-12 col-md-8">
+  	<h2>Tweet</h2>
+  	<% posts["statuses"].each do |post| %>
+		<%= image_tag post["user"]["profile_image_url"], size: "25x25" %>
+		<%= post["user"]["name"] %><br>
+	<%= post["text"] %><br>
+	<% if post["entities"]["media"].present? %>
+		<%= image_tag post["entities"]["media"][0]["media_url"] %><br>
+	<% end %>
+	<% end %>
+  </div>
+
+	<div class="col-xs-6 col-md-4">
+		<% stocks.each do |stock| %>
+			<%= stock["ask"] %><br>
+			<%= stock["bid"] %><br>
+			<%= stock["change"] %><br>
+			<%= stock["market_capitalization"] %><br>
+			<%= stock["earnings_per_share"] %><br>
+		<% end %>
+	</div>
+</div>
